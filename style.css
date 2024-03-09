@@ -11,15 +11,15 @@ body {
     font-size: 16px;
     font-family: 'poppins';
     font-weight: 400;
-    color: black;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    background: #c21500;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .custom-box{
     max-width: 700px;
-    background-color: whitesmoke;
+    background-color: black;
     margin: 40px auto;
     padding: 30px;
     border-radius: 10px;
@@ -38,7 +38,7 @@ body {
 
   .home-box h3{
     font-size: 18px;
-    color: black;
+    color: white;
     font-weight: 500;
     margin-bottom: 15px;
     line-height: 25px;
@@ -48,7 +48,7 @@ body {
     font-size: 16px;
     margin-bottom: 10px;
     line-height: 22px;
-    color: black;
+    color: white;
     font-weight: 400;
   }
 
@@ -63,7 +63,7 @@ body {
   .btn{
     padding: 15px 45px;
     background-color: #232526;
-    color: whitesmoke;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -82,16 +82,16 @@ body {
 
   .quiz-box .question-number{
     font-size: 18px;
-    color: black;
+    color: white;
     font-weight: 600;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     padding-bottom: 10px;
     line-height: 25px;
   }
 
   .quiz-box .question-text{
     font-size: 22px;
-    color: black;
+    color: white;
     line-height: 28px;
     font-weight: 400;
     padding: 10px 0;
@@ -141,7 +141,7 @@ body {
   .result-box h1{
     font-size: 36px;
     line-height: 42px;
-    color: black;
+    color: white;
   }
 
   .result-box table{
@@ -151,10 +151,10 @@ body {
   }
 
   .result-box table td{
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 8px 15px;
     font-weight: 500;
-    color: black;
+    color: white;
     width: 50%;
     text-align: left;
     font-size: 18px;
