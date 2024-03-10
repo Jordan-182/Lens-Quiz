@@ -48,7 +48,7 @@ body {
   }
 
   .home-box h3{
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     font-weight: 500;
     margin-bottom: 15px;
@@ -80,6 +80,10 @@ body {
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
+  }
+
+  .btn:hover{
+    background-color: grey;
   }
 
   .quiz-box .question-number,
@@ -125,6 +129,10 @@ body {
     animation: fadeIn 0.2s ease forwards;
     position: relative;
     overflow: hidden;
+  }
+
+  .quiz-box .option-container .option:hover{
+    background-color: white;
   }
 
   .quiz-box .option-container .option.already-answered{
