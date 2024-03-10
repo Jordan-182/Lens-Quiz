@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    height: 90vh;
     font-size: 16px;
     font-family: 'poppins';
     font-weight: 400;
@@ -15,6 +15,17 @@ body {
     background: #c21500;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  h1{
+    text-align: center;
+    width: 700px;
+    color: white;
+    background-color: black;
+    font-family: 'Shadows into light';
+    font-size: 42px;
+    border-radius: 20px;
+    margin: 20px auto;
   }
 
   .custom-box{
@@ -230,7 +241,7 @@ body {
     display: none;
   }
 
-  .result-box h1{
+  .result-box h2{
     font-size: 36px;
     line-height: 42px;
     color: white;
