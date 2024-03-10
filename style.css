@@ -187,6 +187,22 @@ body {
     margin-top: 15px;
   }
 
+  .quiz-box .answers-indicator div.correct{
+    background-color: green;
+    background-image: url("../src/img/correct.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .quiz-box .answers-indicator div.wrong{
+    background-color: red;
+    background-image: url("../src/img/wrong.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .result-box{
     text-align: center;
   }

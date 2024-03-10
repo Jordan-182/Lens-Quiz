@@ -1,11 +1,13 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
+const answersIndicatorContainer = document.querySelector(".answers-indicator");
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
+
 
 // push the questions into availableQuestions Array
 function setAvailableQuestions(){
@@ -66,10 +68,14 @@ function getResult(element){
     if(id === currentQuestion.answer){
         // set the green color to correct option
         element.classList.add("correct");
+        // add the indicator to correct mark
+        updateAnswerIndicator("correct");
     }
     else{
         // set the red color to incorrect option
         element.classList.add("wrong");
+        // add the indicator to wrong mark
+        updateAnswerIndicator("wrong");
 
         // if answer incorrect then show correct answer green
         const optionLen = optionContainer.children.length;
@@ -90,6 +96,18 @@ function unclickableOptions(){
     }
 }
 
+function answersIndicator(){
+    const totalQuestion = quiz.length;
+    for(let i=0; i<totalQuestion; i++){
+        const indicator = document.createElement("div");
+        answersIndicatorContainer.appendChild(indicator);
+    }
+}
+
+function updateAnswerIndicator(markType){
+    answersIndicatorContainer.children[questionCounter-1].classList.add(markType)
+}
+
 function next(){
     if(questionCounter === quiz.length){
         console.log("Quiz terminé!")
@@ -104,4 +122,6 @@ window.onload = function(){
     setAvailableQuestions();
     // then call getNewQuestion(); function
     getNewQuestion();
+    // to create indicator of answers
+    answersIndicator();
 }
