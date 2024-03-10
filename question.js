@@ -50,5 +50,5 @@ const quiz = [
         q:'En 2022-2023, Loïs Openda bat le record du nombre de buts inscrits par un Lensois sur une saison de Ligue 1, qui détenait le précédent record?',
         options:['Ahmed Oudjani','Roger Boli','Tony Vairelles','Aruna Dindane'],
         answer:1
-    }
+    },
 ]

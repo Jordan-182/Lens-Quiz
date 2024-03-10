@@ -11,13 +11,13 @@
 </head>
 <body>
 
-<div class="home-box custom-box hide">
+<div class="home-box custom-box">
     <h3>Instructions:</h3>
-    <p>Nombre total de questions : <span class="total-question">10</span></p>
-    <button type="button" class="btn">Commencer le quiz</button>
+    <p>Nombre total de questions : <span class="total-question"></span></p>
+    <button type="button" class="btn" onclick="startQuiz()">Commencer le quiz</button>
 </div>
 
-<div class="quiz-box custom-box">
+<div class="quiz-box custom-box hide">
     <div class="question-number">
 
     </div>
@@ -28,7 +28,7 @@
 
     </div>
     <div class="next-question-btn">
-        <button type="button" class="btn" onclick="next()">Question suivante</button>
+        <button type="button" class="btn" onclick="next()">Suivant</button>
     </div>
     <div class="answers-indicator">
 

@@ -50,9 +50,9 @@ function getNewQuestion(){
     for(let i=0; i<optionLen; i++){
         // random option
         const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-        // get the position of 'optionIndex' from the availableOptions
+        // get the position of 'optionIndex' from the availableOptions Array
         const index2 = availableOptions.indexOf(optionIndex);
-        // remove the 'optionIndex' from the availableOptions, so the options doesn't repeat
+        // remove the 'optionIndex' from the availableOptions Array, so the options doesn't repeat
         availableOptions.splice(index2,1);
         const option = document.createElement("div");
         option.innerHTML = currentQuestion.options[optionIndex];
@@ -76,7 +76,6 @@ function getResult(element){
         // add the indicator to correct mark
         updateAnswerIndicator("correct");
         correctAnswers++;
-        console.log("correct:"+correctAnswers)
     }
     else{
         // set the red color to incorrect option
@@ -119,7 +118,6 @@ function updateAnswerIndicator(markType){
 
 function next(){
     if(questionCounter === quiz.length){
-        console.log("Quiz terminé!");
         quizOver();
     }
     else{
@@ -146,15 +144,43 @@ function quizResult(){
     resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
 }
 
-function tryAgainQuiz(){}
+function resetQuiz(){
+    questionCounter = 0;
+    correctAnswers = 0;
+    attempt = 0;
+}
 
-function goToHome(){}
+function tryAgainQuiz(){
+    // hide resultBox
+    resultBox.classList.add("hide");
+    // show quizBox
+    quizBox.classList.remove("hide");
+    resetQuiz();
+    startQuiz();
+}
 
-window.onload = function(){
+function goToHome(){
+    // hide resultBox
+    resultBox.classList.add("hide");
+    // show homeBox
+    homeBox.classList.remove("hide");
+    resetQuiz();
+}
+
+// ***Starting Point***
+function startQuiz(){
+    // hide homeBox
+    homeBox.classList.add("hide");
+    // show quizBox
+    quizBox.classList.remove("hide");
     // first set all questions in availableQuestions Array
     setAvailableQuestions();
     // then call getNewQuestion(); function
     getNewQuestion();
     // to create indicator of answers
     answersIndicator();
+}
+
+window.onload = function(){
+    homeBox.querySelector(".total-question").innerHTML = quiz.length;
 }
