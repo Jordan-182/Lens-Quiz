@@ -17,13 +17,13 @@ body {
     background: linear-gradient(to left, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
-  h1{
+  .titre{
     text-align: center;
-    width: 700px;
+    max-width: 700px;
     color: white;
     background-color: black;
     font-family: 'Shadows into light';
-    font-size: 42px;
+    font-size: 24px;
     border-radius: 20px;
     margin: 20px auto;
   }
@@ -219,7 +219,7 @@ body {
 
   .quiz-box .answers-indicator div.correct{
     background-color: green;
-    background-image: url("../src/img/correct.png");
+    background-image: url("/public/src/img/correct.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -227,7 +227,7 @@ body {
 
   .quiz-box .answers-indicator div.wrong{
     background-color: red;
-    background-image: url("../src/img/wrong.png");
+    background-image: url("/public/src/img/wrong.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
